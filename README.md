@@ -13,7 +13,8 @@ primes for the corresponding row and column.
 
 	$ lein run [num]
 
-	With num being the number of primes to use to build the table. Num has a default value of 10.
+	With num being the number of primes to use to build the table.
+	Num has a default value of 10.
 
 
 ## Tests
