@@ -9,10 +9,9 @@
 
 (def prime-numbers
   "Return a lazy sequence of prime number.
-  
-  Filter the sequence of numbers starting at 3 incremented by 2.
-  This keeps us from looking at multiples of 2
-  Prepend 2 because we know it is prime"
+  - Filter the sequence of numbers starting at 3 incremented by 2.
+  - This keeps us from looking at multiples of 2
+  - repend 2 because we know it is prime"
   (cons 2 (filter is-prime? (iterate #(+ 2 %) 3))))
 
 (defn get-prime-numbers

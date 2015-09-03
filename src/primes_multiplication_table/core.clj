@@ -3,7 +3,6 @@
   (:use [primes-multiplication-table.primes :as primes])  
   (:require [clojure.string :refer [join]]))
 
-
 (defn get-primes
   "Return N primes"
   [num]
@@ -14,13 +13,7 @@
   http://stackoverflow.com/a/3330867
   "
   [nums]
-  (vec (map
-        (fn [x]
-          (vec (map
-                (fn [y]
-                  (* x y))
-                nums)))
-        nums)))
+  (vec (map (fn [x] (vec (map (fn [y] (* x y)) nums))) nums)))
   
 (defn number-string-width
   "Return the number of characters needed to print a number. The string width of a number"
