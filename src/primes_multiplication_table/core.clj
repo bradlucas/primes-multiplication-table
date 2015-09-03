@@ -10,8 +10,7 @@
 
 (defn build-multiplication-table
   "Return a vector of vectors created by multiplying each value in nums
-  http://stackoverflow.com/a/3330867
-  "
+  @see http://stackoverflow.com/a/3330867"
   [nums]
   (vec (map (fn [x] (vec (map (fn [y] (* x y)) nums))) nums)))
   
@@ -34,9 +33,10 @@
   "Return the header body divider.
   -|--|--|--|--|--|-"
   [widths]
-  (join "-|-" (map #(String. (char-array % \-)) widths)))   ;; 
+  (join "-|-" (map #(String. (char-array % \-)) widths)))
   
 (defn print-primes-table
+  "Build the table and then print it in a formatted table"
   [n]
   (let [primes (get-primes n)
         table (build-multiplication-table primes)
